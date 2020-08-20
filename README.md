@@ -30,4 +30,44 @@ The **SmartVote** project is an intelligent voting platform that replaces tradit
 
 ## Design guidelines
 
-`Not yet implemented`
+All UX design files and previews are located in the [Design](https://github.com/lukzmu/smart-vote/tree/master/Design/) directory.
+
+Assets can be found in the [Design/Assets](https://github.com/lukzmu/smart-vote/tree/master/Design/Assets/) directory.
+
+### Colors
+
+| **Color** | **Description** |
+| :-- | :-- |
+| `#D8D8D8` | Accent color |
+| `#4A4A4A` | Text and input color |
+| `#8E91AC` | Subtitle text color |
+
+### Fonts and Text
+
+Font to use: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+
+| **Element** | **Style** | **Size** |
+| :-- | :-- | :-- |
+| `H1` | Bold | 36 px |
+| `H3` | Bold | 24 px |
+| Regular text | Regular | 14 px |
+| Voting box title | Bold | 18 px |
+| Voting box subtitle | Bold | 14 px |
+| Voting box text | Regular | 12 px |
+
+### Other elements
+
+| **Element** | **Parameter** | **Value** |
+| :-- | :-- | :-- |
+| General elements | Margin | 20 px |
+| Images and Voting box | Corner rounding | 15 px |
+| Voting button | Corner rounding | 8 px |
+| Voting description circle | Diameter | 80 px |
+| Dash | Length | 3 px |
+
+### Image attribution
+
+All photos and images used in the creation of the project were downloaded from [Unsplash](https://unsplash.com/).
+
+> Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.
+
