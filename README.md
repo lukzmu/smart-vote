@@ -30,9 +30,9 @@ The **SmartVote** project is an intelligent voting platform that replaces tradit
 
 ## Design guidelines
 
-All UX design files and previews are located in the [Design](https://github.com/lukzmu/smart-vote/tree/master/Design/) directory.
+All UX design files and previews are located in the [Design](https://gitlab.com/lukzmu/smart-vote/-/tree/master/Design) directory.
 
-Assets can be found in the [Design/Assets](https://github.com/lukzmu/smart-vote/tree/master/Design/Assets/) directory.
+Assets can be found in the [Design/Assets](https://gitlab.com/lukzmu/smart-vote/-/tree/master/Design/Assets) directory.
 
 ### Colors
 
