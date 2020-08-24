@@ -67,6 +67,12 @@ When running the server on your machine, the host is `0.0.0.0:8000`.
 | `/voting` | `GET` | Get all active votings happening in the system. |
 | `/voting` | `POST` | Create a new voting with answers. |
 
+### AWS Deploy
+
+The application is hosted on AWS EC2 instance for hackathon purposes:
+
+- `http://ec2-34-244-59-141.eu-west-1.compute.amazonaws.com:8000/docs`
+
 ### Alembic commands
 
 - Create migration
