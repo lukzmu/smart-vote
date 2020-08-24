@@ -1,15 +1,11 @@
 import uuid
+import binascii
+
 import Crypto
 from Crypto.PublicKey import RSA
-import binascii
 
 from blockchain.block import Block
 from blockchain.transaction import Transaction
-
-
-MINE_SENDER = 'Smart Vote'
-MINE_REWARD = 1
-MINE_DIFF = 2
 
 
 class Blockchain:
@@ -19,9 +15,9 @@ class Blockchain:
         self._create_genesis()
 
     def _create_genesis(self):
-        self.add_block('00')
+        self._add_block('00')
 
-    def _validate_chain(self):
+    def validate_chain(self):
         for index in range(1, len(self.chain)):
             last_block = self.chain[index - 1]
             block = self.chain[index]
@@ -29,7 +25,7 @@ class Blockchain:
                 return False
         return True
 
-    def add_block(self, previous_hash):
+    def _add_block(self, previous_hash):
         new_block = Block(
             block_number=len(self.chain) + 1,
             transactions=self.transactions,
@@ -55,7 +51,7 @@ class Blockchain:
         # New block after each transaction, change to
         # whatever you want or comment to make it valid.
         if len(self.transactions) == 1:
-            self.add_block(self.chain[-1].get_hash())
+            self._add_block(self.chain[-1].get_hash())
 
         return len(self.chain) + 1
     
