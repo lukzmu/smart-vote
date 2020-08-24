@@ -28,8 +28,10 @@ Install [Docker](https://docs.docker.com/get-docker/)
 
 Start by ensuring that you have Docker and Docker Compose:
 
-`docker -v` <br>
-`docker-compose -v`
+```
+docker -v
+docker-compose -v
+```
 
 Build the new image and spin up the two containers:
 `docker-compose up -d --build`
