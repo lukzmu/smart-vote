@@ -16,13 +16,21 @@ The **SmartVote** project is an intelligent voting platform that replaces tradit
 
 - [Lukasz Zmudzinski](https://zmudzinski.me) - Backend, Frontend, Design, Idea
 - [Adam Zybura](https://github.com/GuineaPigGod) - Frontend
-
+- [Sandra Kuczyńska](https://github.com/visse0001) - Backend
 
 # Technical details
 
 ## Backend service
 
-`Not yet implemented`
+### Docker
+
+Install [Docker](https://docs.docker.com/get-docker/)
+
+Start by ensuring that you have Docker and Docker Compose:
+
+`docker -v` <br>
+`docker-compose -v`
+
 
 ## Website
 
