@@ -3,8 +3,8 @@ import Crypto
 from Crypto.PublicKey import RSA
 import binascii
 
-from block import Block
-from transaction import Transaction
+from blockchain.block import Block
+from blockchain.transaction import Transaction
 
 
 MINE_SENDER = 'Smart Vote'
