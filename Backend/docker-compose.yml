@@ -8,6 +8,8 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
+    volumes:
+      postgres_data:
   smart-vote:
     build: .
     command: uvicorn main:app --reload
@@ -15,6 +17,3 @@ services:
       - .:/app/
     ports:
       - 8000:8000
-
-volumes:
-  postgres_data:
