@@ -75,5 +75,9 @@ def create_voting(vote: Vote):
     return db_vote
 
 @app.get('/voting', response_model=List[Vote], tags=['database'])
-def get_all_votings():
-    return [r for r in db.session.query(ModelVote)]
+def get_all_active_votings():
+    return [
+        r for r in db.session.query(ModelVote).filter(
+            ModelVote.is_active == True
+        )
+    ]
