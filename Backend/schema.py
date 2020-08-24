@@ -1,5 +1,6 @@
 import uuid
 from pydantic import BaseModel
+from typing import Optional, List
 
 
 class BasicResponse(BaseModel):
@@ -25,24 +26,25 @@ class TransactionResponse(BaseModel):
 class BlockchainValidationResponse(BaseModel):
     is_valid: bool
 
+class Answer(BaseModel):
+    id: Optional[uuid.UUID]
+    description: str
+    public_key: str
+    private_key: str
+    vote: Optional[uuid.UUID]
+
+    class Config:
+        orm_mode = True
+
 
 class Vote(BaseModel):
-    id: uuid.UUID
+    id: Optional[uuid.UUID]
     name: str
     category: str
     description: str
     image: str
     is_active: bool
-
-    class Config:
-        orm_mode = True
-
-class Answer(BaseModel):
-    id: uuid.UUID
-    description: str
-    public_key: str
-    private_key: str
-    vote: uuid.UUID
+    answers: List[Answer]
 
     class Config:
         orm_mode = True
