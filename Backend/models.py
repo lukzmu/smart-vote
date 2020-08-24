@@ -33,5 +33,6 @@ class Vote(Base):
     name = Column(String)
     category = Column(String)
     description = Column(String)
+    image = Column(String)
     is_active = Column(Boolean)
     answers = relationship("Answer")
