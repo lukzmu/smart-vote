@@ -63,6 +63,17 @@ When running the server on your machine, the host is `0.0.0.0:8000`.
 | `/wallet` | `GET` | Generate a new wallet for a user. |
 | `/transaction` | `POST` | Create a new voting transaction. |
 
+### Alembic commands
+
+- Create migration
+   ```
+   docker-compose run smart-vote alembic revision --autogenerate -m "Migration"
+   ```
+- Update database
+   ```
+   docker-compose run smart-vote alembic upgrade head
+   ```
+
 ### Blockchain
 
 This project uses a simplified version of a Blockchain. Due to the nature of hackathons, it wasn't possible to implement a fully working version during the event. Things that you need to have in mind when using this project:
