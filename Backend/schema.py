@@ -29,8 +29,8 @@ class BlockchainValidationResponse(BaseModel):
 class Answer(BaseModel):
     id: Optional[uuid.UUID]
     description: str
-    public_key: str
-    private_key: str
+    public_key: Optional[str]
+    private_key: Optional[str]
     vote: Optional[uuid.UUID]
 
     class Config:
