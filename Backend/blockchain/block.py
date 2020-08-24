@@ -12,7 +12,7 @@ class Block:
         nonce,
         previous_hash,
     ):
-        self.block_number: block_number
+        self.block_number = block_number
         self.timestamp = time.time()
         self.transactions = transactions
         self.nonce = nonce
@@ -27,5 +27,5 @@ class Block:
 
     def get_hash(self):
         return hashlib.sha256(
-            json.dumps(self.to_dict()),
+            json.dumps(self.to_dict()).encode('utf-8'),
         ).hexdigest()

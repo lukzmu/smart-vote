@@ -19,7 +19,7 @@ class Transaction:
         )
         verifier = PKCS1_v1_5.new(public_key)
         transaction_sha = SHA.new(
-            json.dumps(self.to_dict()),
+            json.dumps(self.to_dict()).encode('utf8'),
         )
 
         return verifier.verify(
