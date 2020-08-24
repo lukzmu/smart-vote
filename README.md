@@ -22,22 +22,70 @@ The **SmartVote** project is an intelligent voting platform that replaces tradit
 
 ## Backend service
 
-### Docker
+### How to run the service on Docker
 
-Install [Docker](https://docs.docker.com/get-docker/)
+1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-Start by ensuring that you have Docker and Docker Compose:
+2. Ensure that you have Docker and Docker Compose:
+   ```
+   docker -v
+   docker-compose -v
+   ```
 
-```
-docker -v
-docker-compose -v
-```
+3. Move to Backend directory:
+   ```
+   cd Backend
+   ```
 
-Move to Backend:
-`cd Backend`
+4. Build the image and spin the containers:
+   ```
+   docker-compose up -d --build
+   ```
 
-Build the new image and spin up the two containers:
-`docker-compose up -d --build`
+### FastAPI project structure
+
+The project uses [FastAPI](https://fastapi.tiangolo.com/) to create the API structure. We chose this framework due to simplicity and the speed of prototyping. The FastAPI code is structured as follows:
+
+| **File** | **Description** |
+| :-- | :-- |
+| `main.py` | Start FastAPI and Blockchain services |
+| `schema.py` | The request and response schema for documentation |
+| `urls.py` | Declaration of paths and view logic |
+
+### Endpoints
+
+When running the server on your machine, the host is `0.0.0.0:8000`.
+
+| **Endpoint** | **Type** | **Description** |
+| :-- | :-- | :-- |
+| `/` | `GET` | The root of the API. Can be used to ping the servie. |
+| `/validate` | `GET` | Validation of the Blockchain structure. |
+| `/wallet` | `GET` | Generate a new wallet for a user. |
+| `/transaction` | `POST` | Create a new voting transaction. |
+
+### Blockchain
+
+This project uses a simplified version of a Blockchain. Due to the nature of hackathons, it wasn't possible to implement a fully working version during the event. Things that you need to have in mind when using this project:
+
+- The simplification means that the chain isn't distributed. There is no node checking and updating based on longest chain present on devices.
+- There is no user authentication, so you can generate multiple wallets and create multiple voting transactions (even from the same wallet).
+- For hackathon presentation purposes, every transaction creates a new block (OMG). This can be turned off, with one line of code, but you know... what happens during a hackathon, stays there.
+
+A short description of *what is what*:
+
+| **File** | **Description** |
+| :-- | :-- |
+| `blockchain.py` | Contains the main blockchain instance description and functions regarding the creation of bocks, transactions and generally useful things. |
+| `block.py` | Contains the Block model class and utility functions. |
+| `transaction.py` | Contains the Transaction model class and utility functions. |
+
+The blockchain implementation is based on:
+
+- [Blockchain-Based E-Voting System](https://skemman.is/bitstream/1946/31161/1/Research-Paper-BBEVS.pdf) scientific paper,
+- [Blockchain-Enabled E-Voting](https://ieeexplore.ieee.org/abstract/document/8405627) scientific paper,
+- [Blockchain-Based E-Voting System](https://ieeexplore.ieee.org/abstract/document/8457919) scientific paper,
+- [ngocjr7/voting-blockchain](https://github.com/ngocjr7/voting-blockchain) repository,
+- [A Practical Introduction to Blockchain with Python](http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/) blog post.
 
 ## Website
 
