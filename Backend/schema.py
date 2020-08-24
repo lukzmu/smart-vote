@@ -8,6 +8,7 @@ class BasicResponse(BaseModel):
 
 
 class WalletResponse(BaseModel):
+    user_uuid: uuid.UUID
     private_key: str
     public_key: str
 

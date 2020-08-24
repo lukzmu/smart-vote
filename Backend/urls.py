@@ -1,4 +1,5 @@
 from typing import List
+import uuid
 from fastapi_sqlalchemy import db
 from main import app, blockchain_app
 from schema import (
@@ -30,6 +31,7 @@ def validate_blockchain_instance():
 def generate_wallet_keys():
     private_key, public_key = blockchain_app.generate_wallet()
     return {
+        'user_uuid': uuid.uuid4(),
         'private_key': private_key,
         'public_key': public_key,
     }
@@ -81,3 +83,22 @@ def get_all_active_votings():
             ModelVote.is_active == True
         )
     ]
+
+@app.get('/results', tags=['blockchain'])
+def get_voting_results(voting_id: str):
+    db_voting = db.session.query(ModelVote).filter(
+        ModelVote.id == voting_id
+    ).first()
+    vote_recipients = [answer.public_key for answer in db_voting.answers]
+    vote_results = blockchain_app.get_voting_transactions(vote_recipients)
+
+    votes = {}
+    for key, value in vote_results.items():
+        for answer in db_voting.answers:
+            if key == answer.public_key:
+                votes[answer.description] = value
+                continue
+    return {
+        'voting_id': voting_id,
+        'votes': votes,
+    }
