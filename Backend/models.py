@@ -23,8 +23,7 @@ class Answer(Base):
     description = Column(String)
     public_key = Column(String)
     private_key = Column(String)
-    vote_id = relationship("")
-    id_person = relationship("Vote", uselist=False, back_populates="answers")
+    vote = Column(UUID, ForeignKey("votes.id"))
 
 
 class Vote(Base):
@@ -35,4 +34,4 @@ class Vote(Base):
     category = Column(String)
     description = Column(String)
     is_active = Column(Boolean)
-    person_id = Column(UUID(as_uuid=True), ForeignKey('answers.id'))
+    answers = relationship("Answer")

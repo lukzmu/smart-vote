@@ -1,3 +1,4 @@
+import uuid
 from pydantic import BaseModel
 
 
@@ -23,3 +24,25 @@ class TransactionResponse(BaseModel):
 
 class BlockchainValidationResponse(BaseModel):
     is_valid: bool
+
+
+class Vote(BaseModel):
+    id: uuid.UUID
+    name: str
+    category: str
+    description: str
+    image: str
+    is_active: bool
+
+    class Config:
+        orm_mode = True
+
+class Answer(BaseModel):
+    id: uuid.UUID
+    description: str
+    public_key: str
+    private_key: str
+    vote: uuid.UUID
+
+    class Config:
+        orm_mode = True
