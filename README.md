@@ -33,6 +33,9 @@ docker -v
 docker-compose -v
 ```
 
+Move to Backend:
+`cd Backend`
+
 Build the new image and spin up the two containers:
 `docker-compose up -d --build`
 
