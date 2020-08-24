@@ -38,7 +38,7 @@ Assets can be found in the [Design/Assets](https://gitlab.com/lukzmu/smart-vote/
 
 | **Color** | **Description** |
 | :-- | :-- |
-| `#D8D8D8` | Accent color |
+| `#B54343` | Accent color |
 | `#4A4A4A` | Text and input color |
 | `#8E91AC` | Subtitle text color |
 

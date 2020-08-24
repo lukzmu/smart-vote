@@ -1,0 +1,128 @@
+body {
+	background-color: white;
+	color: #4A4A4A;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+}
+
+.container header {
+	display: inline-block;
+	width: 100%;
+	padding: 20px 0;
+	margin-top: 20px;
+}
+
+.navbar {
+	min-height: 70px;
+	text-align: right;
+	padding: 20px;
+}
+
+.bg-smartvote {
+	background-color: #B54343;
+}
+
+h1 {
+	font-size: 36px;
+	color: #4A4A4A;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 20px;
+	color: black;
+	margin-top: 50px;
+	font-weight: bold;
+	float: left;
+}
+
+.vote-box {
+	display: block;
+	border-radius: 15px;
+	padding: 0px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.vote-box img {
+	width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	max-height: 250px;
+}
+
+.vote-box .description {
+	padding: 20px;
+}
+
+.vote-box h1 {
+	margin: 0px;
+	font-size: 14pt;
+	width: 100%;
+	text-align: left;
+	display: inline-block;
+}
+
+.vote-box span {
+	font-size: 12pt;
+	color: #8E91AC;
+	width: 100%;
+	font-style: bold;
+	text-align: left;
+	display: inline-block;
+}
+
+.vote-box p {
+	margin: 20px 0;
+	text-align: justify;
+}
+
+.number-circle {
+    border-radius: 50%;
+    width: 80px;
+	height: 80px;
+	padding: 16px;
+
+    border: 2px dashed #666;
+    color: #4A4A4A;
+	text-align: center;
+	font-size: 30px;
+	
+	display: block;
+	margin-right: 1em;
+}
+
+.how-to-bullet {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.how-to-bullet h3 {
+	display: block;
+	font-style: bold;
+	margin-top: 30px;
+}
+
+.about-description {
+	text-align: justify;
+}
+
+.info {
+	min-height: 70px;
+	background-color: #B54343;
+	color: white;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	padding: 20px;
+}
+
+.baner {
+	border-radius: 15px;
+	border: 2px dashed #666;
+	min-height: 250px;
+}
+
+.baner img {
+	margin: 90px auto;
+}
