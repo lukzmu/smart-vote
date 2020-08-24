@@ -12,20 +12,17 @@ class Transaction:
         self.recipient = recipient
         self.value = value
         self.signature = signature
+    
+    def __getattr__(self, attr):
+        return self.data[attr]
 
-    def verify_signature(self):
-        public_key = RSA.importKey(
-            binascii.unhexlify(self.sender),
-        )
-        verifier = PKCS1_v1_5.new(public_key)
-        transaction_sha = SHA.new(
-            json.dumps(self.to_dict()).encode('utf8'),
-        )
-
-        return verifier.verify(
-            transaction_sha,
+    def sign_transaction(self):
+        private_key = RSA.importKey(
             binascii.unhexlify(self.signature),
         )
+        signer = PKCS1_v1_5.new(private_key)
+        h = SHA.new(self.to_dict()).encode('UTF-8')
+        return binascii.hexlify(signer.sign(h)).decode('ascii')
 
     def to_dict(self):
         return OrderedDict({
