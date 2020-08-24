@@ -9,11 +9,14 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      postgres_data:
+      - .:/postgres_data/
   smart-vote:
     build: .
-    command: uvicorn main:app --reload
+    command: uvicorn main:app --reload --host 0.0.0.0
     volumes:
       - .:/app/
     ports:
-      - 8000:8000
+      - "8000:8000"
+
+volumes:
+  postgres_data:
