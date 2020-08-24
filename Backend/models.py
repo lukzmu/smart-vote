@@ -3,7 +3,6 @@ from uuid import uuid4
 from sqlalchemy import (
     Column,
     Integer,
-    MetaData,
     String,
     ForeignKey,
     Boolean,
@@ -11,14 +10,9 @@ from sqlalchemy import (
     Float,
 )
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
-from settings import PostgresConfiguration
 from sqlalchemy.dialects.postgresql import UUID
 
-pg = PostgresConfiguration()
-engine = create_engine(pg.postgres_db_path)
-meta = MetaData(engine)
 Base = declarative_base()
 
 
@@ -42,5 +36,3 @@ class Vote(Base):
     description = Column(String)
     is_active = Column(Boolean)
     person_id = Column(UUID(as_uuid=True), ForeignKey('answers.id'))
-
-
