@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  smart-vote:
+    build: .
+    command: uvicorn main:app --reload
+    volumes:
+      - .:/app/
+    ports:
+      - 8000:8000
+
