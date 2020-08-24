@@ -66,6 +66,7 @@ When running the server on your machine, the host is `0.0.0.0:8000`.
 | `/transaction` | `POST` | Create a new voting transaction. |
 | `/voting` | `GET` | Get all active votings happening in the system. |
 | `/voting` | `POST` | Create a new voting with answers. |
+| `/results` | `GET` | Preview results for a selected voting. |
 
 ### AWS Deploy
 
