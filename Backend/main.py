@@ -3,7 +3,11 @@ from blockchain.blockchain import Blockchain
 from fastapi_sqlalchemy import DBSessionMiddleware
 
 # Start applications
-app = FastAPI()
+app = FastAPI(
+    title='Smart Vote API',
+    description='Our awesome application for the Wizja Rozwoju hackathon 2020. Be sure to check out the repo: https://gitlab.com/lukzmu/smart-vote.',
+    version='hacky alpha',
+)
 blockchain_app = Blockchain()
 
 # Middleware

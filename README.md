@@ -22,6 +22,8 @@ The **SmartVote** project is an intelligent voting platform that replaces tradit
 
 ## Backend service
 
+![FastAPI Swagger](api_screenshot.png)
+
 ### How to run the service on Docker
 
 1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
@@ -62,6 +64,8 @@ When running the server on your machine, the host is `0.0.0.0:8000`.
 | `/validate` | `GET` | Validation of the Blockchain structure. |
 | `/wallet` | `GET` | Generate a new wallet for a user. |
 | `/transaction` | `POST` | Create a new voting transaction. |
+| `/voting` | `GET` | Get all active votings happening in the system. |
+| `/voting` | `POST` | Create a new voting with answers. |
 
 ### Alembic commands
 
