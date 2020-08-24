@@ -52,6 +52,8 @@ class Blockchain:
 
         # Automatically add blocks after transaction
         # only for hackathon presentation purposes.
+        # New block after each transaction, change to
+        # whatever you want or comment to make it valid.
         if len(self.transactions) == 1:
             self.add_block(self.chain[-1].get_hash())
 
