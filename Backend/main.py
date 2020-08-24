@@ -1,8 +1,9 @@
 from fastapi import FastAPI
+from blockchain.blockchain import Blockchain
 
+# Start applications
 app = FastAPI()
+blockchain_app = Blockchain()
 
-
-@app.get("/")
-def read_root():
-    return {"message": "Hello World"}
+# Import API views
+from urls import *
