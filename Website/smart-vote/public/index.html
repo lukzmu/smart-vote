@@ -36,13 +36,13 @@
 				<ul class="navbar-nav mr-auto"></ul>
 				<ul class="navbar-nav  navbar-right">
 					<li class="nav-item">
-						<a class="nav-link" href="#"> Aktywne wybory </a>
+						<a class="nav-link" href="#voting"> Aktywne wybory </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"> Jak głosować? </a>
+						<a class="nav-link" href="#how-to"> Jak głosować? </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"> Co to SmartVote? </a>
+						<a class="nav-link" href="#about"> Co to SmartVote? </a>
 					</li>
 				</ul>
 			</div>
@@ -65,50 +65,7 @@
 					</div>
 				</div> -->
 			</header>
-			<div class="row">
-				<div class="col-sm-6 col-md-4">
-					<div class="vote-box">
-						<img src="img/motlawa.jpg" alt="Motlawa">
-						<div class="description">
-							<h1 class="float-left">Prezydent miasta Gdańsk</h1>
-							<span>Wybory</span>
-							<p>
-								Powszechne wybory na prezydenta miasta Gdańsk na kolejną kadencję.
-							</p>
-							<button type="button" class="btn btn-danger btn-lg btn-block  bg-smartvote">Block level
-								button</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="vote-box">
-						<img src="img/motlawa.jpg" alt="Motlawa">
-						<div class="description">
-							<h1 class="float-left">Prezydent miasta Gdańsk</h1>
-							<span>Wybory</span>
-							<p>
-								Powszechne wybory na prezydenta miasta Gdańsk na kolejną kadencję.
-							</p>
-							<button type="button" class="btn btn-danger btn-lg btn-block  bg-smartvote">Block level
-								button</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="vote-box">
-						<img src="img/motlawa.jpg" alt="Motlawa">
-						<div class="description">
-							<h1 class="float-left">Prezydent miasta Gdańsk</h1>
-							<span>Wybory</span>
-							<p>
-								Powszechne wybory na prezydenta miasta Gdańsk na kolejną kadencję.
-							</p>
-							<button type="button" class="btn btn-danger btn-lg btn-block  bg-smartvote">Block level
-								button</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="root"></div>
 	</section>
 	<section id="how-to">
 		<div class="container">
@@ -181,22 +138,21 @@
 		</div>
 	</footer>
 
+	<!-- React -->
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
+	<!-- Application -->
+	<script src="js/app.js"></script>
+
+	<!-- Bootstrap -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 		crossorigin="anonymous"></script>
-
 	<script src="js/bootstrap.min.js"></script>
 
-
-
-
 </body>
-
-
-
 </html>
