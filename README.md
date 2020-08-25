@@ -111,7 +111,15 @@ The blockchain implementation is based on:
 
 ## Website
 
-`Not yet implemented`
+The website is built on [React](https://reactjs.org/) using the [npm](https://www.npmjs.com/) package manager. To run the website you need to run the following command in the `Website/smart-vote` directory:
+
+```
+npm start
+```
+
+If you don't have `npm` or React installed follow [this guide](https://reactjs.org/docs/getting-started.html).
+
+To fully work, the website requires the EC2 instances to be up and running. That might not be the case after the hackathon ends.
 
 ## Design guidelines
 
