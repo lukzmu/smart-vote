@@ -8,6 +8,48 @@ HOST = 'http://ec2-34-244-59-141.eu-west-1.compute.amazonaws.com:8000/'
 
 
 def create_votings():
+    presidential_elections = {
+        'name': 'Wybory prezydenckie 2020',
+        'category': 'Wybory',
+        'description': 'Minions ipsum baboiii hana dul sae jeje bee do bee do bee do.',
+        'image': 'https://www.polska-ie.com/wp-content/uploads/2020/05/made-in-poland-e1536569723765-768x432.jpg',
+        'is_active': True,
+        'answers': [
+            {
+                'description': 'Robert Biedroń'
+            },
+            {
+                'description': 'Krzysztof Bosak'
+            },
+            {
+                'description': 'Andrzej Sebastian Duda'
+            },
+            {
+                'description': 'Szymon Franciszek Hołownia'
+            },
+            {
+                'description': 'Marek Jakubiak'
+            },
+            {
+                'description': 'Władysław Marcin Kosiniak-Kamysz'
+            },
+            {
+                'description': 'Mirosław Mariusz Piotrowski'
+            },
+            {
+                'description': 'Paweł Jan Tanajno'
+            },
+            {
+                'description': 'Rafał Kazimierz Trzaskowski'
+            },
+            {
+                'description': 'Waldemar Włodzimierz Witkowski'
+            },
+            {
+                'description': 'Stanisław Józef Żółtek'
+            },
+        ],
+    }
     green_paths_data = {
         'name': 'Ścieżki spacerowe Zaspa',
         'category': 'Budżet obywatelski',
@@ -50,7 +92,11 @@ def create_votings():
 
     requests.post(
         HOST + 'voting',
-        json=green_paths_data
+        json=presidential_elections,
+    )
+    requests.post(
+        HOST + 'voting',
+        json=green_paths_data,
     )
     requests.post(
         HOST + 'voting',
