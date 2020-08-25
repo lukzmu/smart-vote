@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>SmartVote</title>
+	<meta name="description" content="smart vote">
+	<meta name="keywords" content="smart vote, głosowanie terytorialne">
+	<meta name="author" content="Jan Kowalski">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-smartvote navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img src="img/smartvote_light.png" width="175" height="26"
+					class="d-inline-block mr-1 align-bottom" alt=""> </a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
+				aria-controls="mainmenu" aria-expanded="false" aria-label="Przełacznik nawigacji">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse navbar-right" id="mainmenu">
+				<ul class="navbar-nav mr-auto"></ul>
+				<ul class="navbar-nav  navbar-right">
+					<li class="nav-item">
+						<a class="nav-link" href="#voting"> Aktywne wybory </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#how-to"> Jak głosować? </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about"> Co to SmartVote? </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="voting">
+		<div class="container">
+			<header>
+				<h1 class="float-left">Aktywne wybory</h1>
+				<!-- <div class="dropdown float-right bg-light">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Filtruj kategorie
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Wszystko</a>
+						<a class="dropdown-item" href="#">Wybory prezydenckie</a>
+						<a class="dropdown-item" href="#">Budżet obywatelski</a>
+					</div>
+				</div> -->
+			</header>
+			<div id="root"></div>
+	</section>
+	<section id="how-to">
+		<div class="container">
+			<header>
+				<h1 class="float-left">Jak głosować?</h1>
+			</header>
+
+			<div class="voting-bullets">
+				<div class="how-to-bullet">
+					<div class="number-circle float-left">1</div>
+					<h3 class="float-left align-middle">Zdobądź unikalny kod do głosowania w swoim Urzędzie</h3>
+				</div>
+				<div class="how-to-bullet">
+					<div class="number-circle float-left">2</div>
+					<h3 class="float-left align-middle">Wybierz jeden z aktywnych wyborów na stronie SmartVote</h3>
+				</div>
+				<div class="how-to-bullet">
+					<div class="number-circle float-left">3</div>
+					<h3 class="float-left align-middle">Na kolejnej stronie zaznacz jedną z dostępnych opcji głosowania
+					</h3>
+				</div>
+				<div class="how-to-bullet">
+					<div class="number-circle float-left">4</div>
+					<h3 class="float-left align-middle">Wpisz swój unikalny kod w przeznaczonym do tego polu</h3>
+				</div>
+				<div class="how-to-bullet">
+					<div class="number-circle float-left">5</div>
+					<h3 class="float-left align-middle">Zakończ głosowanie i czekaj na oficjalne wyniki</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<div class="container">
+			<header>
+				<h1>Co to SmartVote?</h1>
+			</header>
+
+			<div class="row">
+				<div class="col-sm-6 col-md-6 about-description">
+					<p>
+						SmartVote to inteligentna platforma do głosowania, która zastępuje tradycyjne metody, dając
+						łatwy i bezpieczny dostęp do głosowania dla każdego człowieka.
+					</p>
+					<p>
+						Dięki zastosowaniu zaawansowanej metody BlockChain, system ten jest bezpieczny i twoje wybory
+						nie mogą zostać sfałszowane, zapewniając bezpieczeństwo Twoje i Twojej społeczności.
+					</p>
+					<p>
+						Jeżeli chcesz się dowiedzieć więcej o systemie SmartVote, odwiedź swój Urząd Miasta, gdzie
+						zostanie on przedstawiony w przystępny sposób.
+					</p>
+				</div>
+				<div class="col-sm-6 col-md-6">
+					<div class="baner">
+						<img class="mx-auto d-block" src="img/smartvote_baner.png" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<div style="clear:both"></div>
+
+	<footer>
+		<div class="info">
+			Projekt stworzony na potrzeby Hackathon Wizja Rozwoju'20.</br>
+			Projekt nie jest oficjalną stroną do głosowania.
+		</div>
+	</footer>
+
+	<!-- React -->
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+	<!-- Application -->
+	<script src="js/app.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
