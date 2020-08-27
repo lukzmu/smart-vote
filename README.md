@@ -17,6 +17,7 @@ The **SmartVote** project is an intelligent voting platform that replaces tradit
 - [Lukasz Zmudzinski](https://zmudzinski.me) - Backend, Frontend, Design, Idea
 - [Adam Zybura](https://github.com/GuineaPigGod) - Frontend
 - [Sandra Kuczyńska](https://github.com/visse0001) - Backend
+- [Denys Stanislavskyi](https://www.linkedin.com/in/denys-stanislavskyi-8a2bb8146/) - Presentation help
 
 # Technical details
 
