@@ -10,7 +10,7 @@
 
 The **SmartVote** project is an intelligent voting platform that replaces traditional voting methods. It gives the user a simple and secure access to vote on things that matter in his community. The project implements BlockChain methods which makes voting secure and minimizes the risk of fraud. The project is based on [scientific research](https://skemman.is/bitstream/1946/31161/1/Research-Paper-BBEVS.pdf).
 
-**SmartVote** is a project that takes part in [Hackathon Wizja Rozwoju `20](https://challengerocket.com/wizjarozwoju20) for smart cities.
+**SmartVote** is a project that takes part in [Hackathon Wizja Rozwoju 20](https://challengerocket.com/wizjarozwoju20) for smart cities.
 
 ## Meet the team
 
@@ -124,9 +124,9 @@ To fully work, the website requires the EC2 instances to be up and running. That
 
 ## Design guidelines
 
-All UX design files and previews are located in the [Design](https://gitlab.com/lukzmu/smart-vote/-/tree/master/Design) directory.
+All UX design files and previews are located in the [Design](/Design) directory.
 
-Assets can be found in the [Design/Assets](https://gitlab.com/lukzmu/smart-vote/-/tree/master/Design/Assets) directory.
+Assets can be found in the [Design/Assets](/Design/Assets) directory.
 
 ### Colors
 
